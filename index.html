@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+	<title>Drag and Drop Monster Music Mixer</title>
+	<link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div id="container">
+        <header id="speaker" class="grid">
+            <img id="speaker-01" src="images/speaker.svg" alt="speaker">
+            <h1><span>MONSTER</span> Music Mixer</h1>
+            <p>Click monsters and Change images!<br>
+            Drag instruments and Drop on monsters!</p>
+            <img id="speaker-02" src="images/speaker.svg" alt="speaker">
+        </header>
+
+        <section class="monsters" id="draggedPiece">
+            <img id="0" src="images/monster0.png" alt="monster_Do">
+            <img id="1" src="images/monster1.png" alt="monster_Re">
+            <img id="2" src="images/monster2.png" alt="monster_mi">
+            <img id="3" src="images/monster3.png" alt="monster-fa">
+            <img id="4" src="images/monster4.png" alt="monster-sol">
+            <img id="5" src="images/monster5.png" alt="monster-la">
+        </section>
+    
+        <section>
+            <div id="instruments" class="inst-con">
+             <div class="item"><img data-key="piano" data-trackref="piano" src="images/piano.png" alt="piano" id="piano" draggable="true"></div>
+             <div class="item"><img data-trackref="Mic" src="images/mic.png" alt="mic" id="mic"></div>
+             <div class="item"><img data-key="guitar" data-trackref="guitar" src="images/guitar.png" alt="guitar" id="guitar"></div>
+             <div class="item2"><img data-trackref="Shaker" src="images/shaker.png" alt="shaker" id="shaker" ></div>
+             <div class="item2"><img data-trackref="Drum" src="images/drum.png" alt="drum" id="drum"></div>
+             <div class="item2"><img data-trackref="Xylophone" src="images/xylophone.png" alt="xylophone" id="xylophone"></div>
+            </div>
+        </section>
+
+        <section class="hidden">
+            <audio data-key="piano" id="piano-audio" src="music/piano.mp3"></audio>
+            <audio id="mic-audio" src="music/funnysong.mp3"></audio>
+            <audio data-key="guitar" id="guitar-audio" src="music/guitar.mp3"></audio>
+            <audio id="shaker-audio" src="music/shaker.mp3"></audio>
+            <audio id="drum-audio" src="music/drum.mp3"></audio>
+            <audio id="xylophone" src="music/xylophone.mp3"></audio>
+        </section>
+
+        <section class="audio-controls">
+            <button id="playButton">PLAY</button>
+            <button id="pauseButton">STOP</button>
+            <button id="rewindButton">REWIND</button>
+      
+            <input id="volumeControl" type="range" min="0" max="100" step="1">
+        </section>
+        
+        <!-- reset 버튼 만들기 -->
+    </div>
+
+     <!-- javascript links always go here at the very bottom of page -->
+     <script src="js/main.js"></script>
+</body>
+</html>
